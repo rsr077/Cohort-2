@@ -1,8 +1,11 @@
- let answer = 0;
-
-for(let i = 0; i<3; i++) {
-  answer = answer + i;
+function call(a,b,callFunction){
+  const ans = callFunction(a,b) 
+  return ans;
 }
 
- 
- console.log(answer);
+function sum(a,b) {
+  return a + b;
+}
+
+const value = call(1, 2, sum)
+console.log(value)
