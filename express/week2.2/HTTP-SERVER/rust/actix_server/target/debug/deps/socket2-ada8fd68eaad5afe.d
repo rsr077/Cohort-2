@@ -1,0 +1,11 @@
+C:\Users\rajee\OneDrive\Desktop\Cohort-2\express\week2.2\HTTP-SERVER\rust\actix_server\target\debug\deps\libsocket2-ada8fd68eaad5afe.rmeta: C:\Users\rajee\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\socket2-0.5.8\src\lib.rs C:\Users\rajee\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\socket2-0.5.8\src\sockaddr.rs C:\Users\rajee\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\socket2-0.5.8\src\socket.rs C:\Users\rajee\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\socket2-0.5.8\src\sockref.rs C:\Users\rajee\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\socket2-0.5.8\src\sys\windows.rs
+
+C:\Users\rajee\OneDrive\Desktop\Cohort-2\express\week2.2\HTTP-SERVER\rust\actix_server\target\debug\deps\libsocket2-ada8fd68eaad5afe.rlib: C:\Users\rajee\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\socket2-0.5.8\src\lib.rs C:\Users\rajee\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\socket2-0.5.8\src\sockaddr.rs C:\Users\rajee\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\socket2-0.5.8\src\socket.rs C:\Users\rajee\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\socket2-0.5.8\src\sockref.rs C:\Users\rajee\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\socket2-0.5.8\src\sys\windows.rs
+
+C:\Users\rajee\OneDrive\Desktop\Cohort-2\express\week2.2\HTTP-SERVER\rust\actix_server\target\debug\deps\socket2-ada8fd68eaad5afe.d: C:\Users\rajee\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\socket2-0.5.8\src\lib.rs C:\Users\rajee\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\socket2-0.5.8\src\sockaddr.rs C:\Users\rajee\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\socket2-0.5.8\src\socket.rs C:\Users\rajee\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\socket2-0.5.8\src\sockref.rs C:\Users\rajee\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\socket2-0.5.8\src\sys\windows.rs
+
+C:\Users\rajee\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\socket2-0.5.8\src\lib.rs:
+C:\Users\rajee\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\socket2-0.5.8\src\sockaddr.rs:
+C:\Users\rajee\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\socket2-0.5.8\src\socket.rs:
+C:\Users\rajee\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\socket2-0.5.8\src\sockref.rs:
+C:\Users\rajee\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\socket2-0.5.8\src\sys\windows.rs:
