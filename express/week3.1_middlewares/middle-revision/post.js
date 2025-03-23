@@ -1,16 +1,14 @@
-const express = require("express")
 
-const app  = express()
-
+const express = require("express");
+const app = express();
 
 app.use(express.json());
 
-app.post("/", function(req,res) {
-   
+ app.post("/health-checkup", function(req,res) {
   const kidneys = req.body.kidneys;
   const kidneyLength = kidneys.length;
 
-  res.send("you have" + kidneyLength)
-})
+  res.send(kidneyLength)
+ })
 
-app.listen(3000)
+  app.listen(3000)

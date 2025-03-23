@@ -17,6 +17,6 @@ const app = express();
        res.json({
         mag:"Sorry something is up with our server"
        })
-    })
+    }) 
 
   app.listen(3000)
