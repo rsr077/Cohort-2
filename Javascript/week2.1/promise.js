@@ -48,7 +48,7 @@ myOwn(function() {
      
     // (Using promises)
 
-    function myOwn(duration) {
+   /*  function myOwn(duration) {
        let p = new Promise(function(reslove){
         setTimeout(reslove,1000);
        });
@@ -57,4 +57,65 @@ myOwn(function() {
 
      myOwn(1000).then(function() {
       console.log("log the first thing");
-     });
+     }); */
+
+
+     //  Approach #1
+
+/*      function myOwn(fn, duration) {  
+      setTimeout(fn, duration)
+     }
+   
+   myOwn(()=> {
+    console.log("hellow world")
+   },1000) */
+
+
+     // Approach #2
+/* 
+      function myOwn() {
+         let p = new Promise(function(reslove) {
+           setTimeout(reslove,5000)
+         })
+         return p;
+      }
+
+        myOwn().then(function () {
+          console.log("HELLO")
+        })
+ *//* 
+        function myOwn(fn, duration) {  
+          setTimeout(fn, duration)
+         }
+       
+       myOwn(()=> {
+        console.log("hellow world")
+       },1000) 
+     */
+
+
+    /*    function myOwn(callback,duration) {
+         setTimeout(function() {
+            callback();
+         })
+       }
+
+        myOwn(function() {
+
+        },duration); */
+
+        // promise 
+
+        function myOwn(duration) {
+           const p = new Promise(function(reslove) {
+             setTimeout(function() {
+              reslove();
+             },duration)
+           })
+           return p;
+        }
+
+    const ans = myOwn(1000);
+    ans.then(function() {
+      console.log("hi everyone ")
+    })
