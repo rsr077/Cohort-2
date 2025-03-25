@@ -21,15 +21,15 @@ const  jwtPassword  = "123456";
     username: "muskan@gmail.com",
     password: "1232324",
     name: "Muskan jain"
-  }
+  },
  ];
 
  function userExists (username, password) {
    // write logic to return true or false if this user exists 
    // in ALL_USERS array 
    //  hard todo - try to use the find function in js 
+         let userExists = false;
 
-   let userExists = false;
     for (let i = 0; i<ALL_USERS.length; i++) {
       if(ALL_USERS[i].username == username && ALL_USERS[i].password == password) {
         userExists = true;
@@ -67,7 +67,7 @@ app.get("/users",function(req,res) {
 
   }catch(err) {
     return res.status(403).json({
-       msg:"Invalid token"
+       msg:"Invalid token",
     });
   }
 });
