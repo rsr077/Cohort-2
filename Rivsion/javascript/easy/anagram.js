@@ -10,6 +10,9 @@ describe('isAnagram', () => {
 		expect(isAnagram('', '')).toBe(true);
 	});
 
+		expect(isAnagram('openai!', 'open')).toBe(false);
+	});
+});
 	test('returns false for non-anagrams', () => {
 		expect(isAnagram('hello', 'world')).toBe(false);
 		expect(isAnagram('openai', 'open')).toBe(false);
@@ -32,6 +35,3 @@ describe('isAnagram', () => {
 
 	test('returns false for non-anagrams with special characters', () => {
 		expect(isAnagram('hello', 'hello!')).toBe(false);
-		expect(isAnagram('openai!', 'open')).toBe(false);
-	});
-});
