@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .subscribe-button {
+      background-color: white;
+       color: black;
+       padding: 10px 15px ;
+       border-radius: 40px;
+       border: 1px solid black;
+       font-weight: bold;
+       cursor: pointer;
+       margin-bottom: 20px;
+    }
+
+    .is-subscribe {
+      background-color: rgb(55, 52, 52);
+      color: white;
+    }
+ 
+
+    .input-cost  {
+        height: 40px;
+        font-size: 20px;
+    }
+    .claculate-button {
+      padding: 13px 14px;
+      background-color: green;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+   
+  </style>
+</head>
+<body>
+  
+
+    
+     <button onclick="subscribe()" class="js-subscribe-button subscribe-button"> 
+   Subscribe</button><br>
+
+
+     <input type = "text" placeholder="cost" class="js-input-cost input-cost" onkeydown="keydowninput(event)">
+     <button class="claculate-button" onclick=" claculateToatal()">Calculate</button>
+     <p class="js-total-cost" ></p>
+
+     <script>
+      function subscribe() {
+         const buttonElement = document.querySelector('.js-subscribe-button');
+         if( buttonElement.innerHTML === 'Subscribe'){
+            buttonElement.innerHTML = 'Subscribed';
+            buttonElement.classList.add('is-subscribe')
+             
+         }else {
+          buttonElement.innerHTML = 'Subscribe'
+          buttonElement.classList.remove('is-subscribe')
+         }
+      }
+     
+
+
+      function keydowninput(event){
+        if(event.key === 'Enter'){
+          claculateToatal();
+        }
+      } 
+
+
+     function claculateToatal () {
+         const inputElemet = document.querySelector('.js-input-cost') 
+        
+         
+         let  cost = Number(inputElemet.value);
+         if(cost < 40) {
+          cost = cost + 10;
+       
+        }
+
+        document.querySelector('.js-total-cost').innerHTML = cost
+     
+         }
+          
+    
+
+        
+  
+
+
+     </script>
+</body>
+</html>
