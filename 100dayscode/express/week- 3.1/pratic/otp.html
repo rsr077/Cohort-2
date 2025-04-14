@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OTP Generator</title>
+</head>
+<body>
+  <button onclick="requestOTP()">Get OTP</button>
+  <p id="otpDisplay"></p>
+
+  <script>
+    async function requestOTP() {
+      const response = await fetch('http://localhost:3000/get-otp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({})
+      });
+
+      const data = await response.json();
+      document.getElementById('otpDisplay').textContent = "OTP: " + data.otp;
+    }
+  </script>
+</body>
+</html>
