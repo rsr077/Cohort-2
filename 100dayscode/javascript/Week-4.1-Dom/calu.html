@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+ 
+
+  <input oninput=" calcution()" class="num1" type="text"><br>
+  <input oninput=" calcution()" class="num2" type="text">
+  <!-- <button onclick="calcution()">Calculate</button> -->
+  <p class="add"></p>
+
+  <script>
+
+     
+  function debouncePopulateDiv() {
+     
+     clearTimeout(timeout)
+      timeout  = setTimeout(function() {
+        calcution();
+     },1000);
+
+   }
+    function calcution() {
+       const num1 = document.querySelector(".num1").value
+       const num2 = document.querySelector(".num2").value
+       const sum = Number(num1) + Number(num2)
+       const sub = Number(num1) - Number(num2)
+        document.querySelector(".add").innerHTML = sub 
+        document.querySelector(".add").innerHTML = sum 
+
+    }
+
+
+ 
+  </script>
+</body>
+</html>
