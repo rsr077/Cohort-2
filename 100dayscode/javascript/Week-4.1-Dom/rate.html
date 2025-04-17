@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" class="principle" placeholder="principle">
+  <input type="text" class="rate" placeholder="rate">
+  <input type="text" class="time" placeholder="time">
+  <div class="total"></div>
+  <button onclick="caculation()">calcution</button>
+  <script>
+    function caculation(){
+       const principle = document.querySelector(".principle").value;
+       const rate = document.querySelector(".rate").value;
+ 
+       const time = document.querySelector(".time").value;
+
+       const interest = ((principle * time * rate)/100)
+       const total = parseInt(principle) + parseInt(interest)
+
+       document.querySelector(".total").innerHTML = total
+
+  </script>
+</body>
+</html>

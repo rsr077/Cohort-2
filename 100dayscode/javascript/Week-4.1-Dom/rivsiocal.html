@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" class="num1">
+  <br></br>
+  <input type="text" class="num2">
+  <br></br>
+  <div class="btn"></div>
+  <button onclick="calcution() ">Calculate sum</button>
+  <script>
+function calcution(){
+    const num1 = document.querySelector(".num1").value;
+    const num2 = document.querySelector(".num2").value;
+
+     const sum = parseInt(num1) + parseInt(num2) ;
+     document.querySelector(".btn").innerHTML = sum;
+}
+  </script>
+</body>
+</html>

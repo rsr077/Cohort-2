@@ -11,13 +11,15 @@
     function  addTodo() {
         const title  = document.getElementById("title").value;
         const description  = document.getElementById("description").value;
-        const childDiv  = document.createElement("div");
-        outterDiv
-      /*    const originalHtml  = document.getElementById("container").innerHTML; */
+        const description2  = document.getElementById("description").value;
+    /*     const childDiv  = document.createElement("div");
+        outterDiv */
+          const originalHtml  = document.getElementById("container").innerHTML; 
          document.getElementById("container").innerHTML = originalHtml  +
     ` <div>
       <div>${title}</div>
       <div>${description}</div>
+        <div>${description2}</div>
       <button>Mark as doen</button>
       </div>
       `
@@ -28,6 +30,8 @@
     <input type="text" placeholder="title" id="title">
     <br></br>
     <input type="text" placeholder="description" id="description">
+    <br></br>
+    <input type="text" placeholder="description" id="description2">
     <br></br>
     <button onclick=" addTodo()">Add todo</button>
     <div id="container"></div>
