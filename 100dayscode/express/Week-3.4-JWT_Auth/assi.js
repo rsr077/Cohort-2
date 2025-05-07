@@ -9,4 +9,4 @@ function decodeJwt(token){
  }
 }
 
-console.log(decodeJwt("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhamVldkBnYW1pbC5jb20iLCJpYXQiOjE3NDQ3MTg3ODV9.IdRJvYCL8kZDjkf322vVluUkTnhDDP2HsgBQ5CJAvQ0"))
+console.log(decodeJwt("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoicmFqZWV2NDY2NTQzQGdtYWlsLmNvbSIsIlBhc3N3b3JkIjoiUmFqZWV2QDg4MDkgIiwiaWF0IjoxNzQ2NTIwNTU1fQ.d1eRgVLmW5QTb0SGAOsd6yilCYwZqPAb_1BXPvi2J2Q"))
