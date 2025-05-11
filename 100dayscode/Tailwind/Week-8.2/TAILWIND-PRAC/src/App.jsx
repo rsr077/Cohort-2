@@ -1,19 +1,15 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
+import './App.css'
+import {RevenueCard} from './components/RevenueCard'
+import {Hi} from './components/hi'
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
-    <>
-    <div className='grid md:grid-cols-12 '> 
-   <div className='bg-blue-500 >hi</div>
-   <div className=' bg-red-500 '>hi</div>
-   <div className='bg-green-500 '>hi</div>
-   </div>
-    </>
+ <div > 
+
+  <Hi  followers={"80k"} Likes={"803k"} Photos={"1.4k"}></Hi>
+    </div>
   )
 }
 
