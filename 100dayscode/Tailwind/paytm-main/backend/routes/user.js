@@ -9,15 +9,15 @@ const router = express.Router();
 // signup and signin routes 
 
 const signupSchema = zod.object({
-  username: zod.string(),
+  username: zod.string().email(),
   password: zod.string(),
   firstName: zod.string(),
-  password: zod.string()
+  lastName: zod.string()
 
 })
 
 router.post("/signup", async (req, res) => {
-    const { success } = signupBody.safeParse(req.body)
+    const { success } = signupSchema.safeParse(req.body)
     if (!success) {
         return res.status(411).json({
             message: "Email already taken / Incorrect inputs"
