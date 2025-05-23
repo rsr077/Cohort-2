@@ -39,6 +39,7 @@ const SignupBody = zod.object({
         lastName: req.body.lastName,
      })
      const userId  = user._id;
+   
      
      /// --- Create new account --- 
 
@@ -132,21 +133,25 @@ const SignupBody = zod.object({
         $or: [{
             firstName: {
                 "$regex": filter
+               
             }
         }, {
             lastName: {
                 "$regex": filter
+                
             }
         }]
      })
       
-      res.json({
-        user: users.map(user => ({
-             username: user.username,
-             firstName: user.firstName,
-             lastName: user.lastName
-        }))
-      })
+     res.json({
+  user: users.map(user => ({
+    _id: user._id, // ✅ include this!
+    username: user.username,
+    firstName: user.firstName,
+    lastName: user.lastName
+  }))
+});
+
  })
 
  module.exports = router;
