@@ -1,24 +1,26 @@
-import { string } from "zod";
+class Rectangle extends Shape {
+  name = "Rectangle";
 
-interface Person {
-  name: string,
-  age : number
-  greet(phrase: string ) : void;
-}
-
-class Emloyee  implements Person {
-  name: string;
-  age: number;
-}
-
-constructor (n: string, a: number) {
-  this.name = n;
-  this.age = a; 
-
-}
-
-  greet(pharse: string) {
-    console.log(`${phrase} ${this.name}`);
+  constructor(public width: number, public height: number) {
+    super();
   }
 
+  // Implement the abstract method
+  calculateArea(): number {
+    return this.width * this.height;
+  }
+}
 
+// Another subclass implementing the abstract class
+class Circle extends Shape {
+  name = "Circle";
+
+  constructor(public radius: number) {
+    super();
+  }
+
+  // Implement the abstract method
+  calculateArea(): number {
+    return Math.PI * this.radius * this.radius;
+  }
+}

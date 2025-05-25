@@ -1,24 +1,4 @@
 
-interface User {
-  firstName: string;
-  lastName: string;
-  age: number;
-  email?: string; 
-}
 
- function isLegel(user: User) {
-    if(user.age > 18) {
-       return true;
-    }else {
-      return false;
-    }
- }
- 
- function greet(user: User) {
-  console.log("hi there " + user.firstName)
- }
-
- isLegel({ 
-  firstName: "rajeev",
-  lastName: "Rajput",
- })
+const x: number = 1;
+console.log(x);
