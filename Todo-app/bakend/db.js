@@ -5,7 +5,7 @@ const mongoose = require("mongoose")
 
  const todoSchema = mongoose.Schema({
   title: String,
-  descritpion: String,
+  description: String,
   completed : {
    type: Boolean,
    default: false

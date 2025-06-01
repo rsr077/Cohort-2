@@ -21,7 +21,8 @@ app.post("/todo",async function(req,res){
 
  await todo.create({
      title: creatPayload.title,
-     descritpion: creatPayload.descritpion,
+ description: creatPayload.description,
+
     completed : false 
   })
   

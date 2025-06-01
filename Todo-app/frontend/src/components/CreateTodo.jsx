@@ -3,53 +3,80 @@ import { useState } from "react";
 export function CreateTodo() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = async () => {
+    if (!title || !description) {
+      setMessage("Please fill out both fields.");
+      return;
+    }
+
+    setIsLoading(true);
+    setMessage("");
+
+    try {
+      const res = await fetch("http://localhost:3000/todo", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ title, description }),
+      });
+
+      if (!res.ok) {
+        throw new Error("Failed to add todo");
+      }
+
+      const json = await res.json();
+      setMessage("✅ Todo added successfully!");
+      setTitle("");
+      setDescription("");
+    } catch (err) {
+      console.error(err);
+      setMessage("❌ Failed to add todo.");
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
-    <div>
+    <div style={{ maxWidth: 400, margin: "auto", padding: 20 }}>
       <input
-        id="title"
-        style={{ padding: 10, margin: 10 }}
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+        style={{ padding: 10, marginBottom: 10, width: "100%" }}
         type="text"
-        placeholder="title"
-        onChange={(e) => {
-          setTitle(e.target.value);
-        }}
+        placeholder="Title"
       />
       <br />
       <input
-        style={{ padding: 10, margin: 10 }}
+        value={description}
+        onChange={(e) => setDescription(e.target.value)}
+        style={{ padding: 10, marginBottom: 10, width: "100%" }}
         type="text"
-        placeholder="description"
-        onChange={(e) => {
-          setDescription(e.target.value);
-        }}
+        placeholder="Description"
       />
       <br />
       <button
-        style={{ padding: 10, margin: 10 }}
-        onClick={() => {
-          fetch("http://localhost:3000/todos", {
-            method: "POST",
-            body: JSON.stringify({
-              title: title,
-              description: description,
-            }),
-            headers: {
-              "Content-Type": "application/json",
-            },
-          })
-            .then(async function (res) {
-              const json = await res.json();
-          alert(`Todo is completed: ${json.message || "Success"}`);                
-            })
-            .catch((err) => {
-              console.error("Error adding todo:", err);
-              alert("Failed to add todo");
-            });
+        onClick={handleSubmit}
+        style={{
+          padding: 10,
+          width: "100%",
+          backgroundColor: "#007bff",
+          color: "white",
+          border: "none",
+          cursor: "pointer",
         }}
+        disabled={isLoading}
       >
-        Add to todo
+        {isLoading ? "Adding..." : "Add to Todo"}
       </button>
+      {message && (
+        <p style={{ marginTop: 10, color: message.includes("✅") ? "green" : "red" }}>
+          {message}
+        </p>
+      )}
     </div>
   );
 }
