@@ -1,13 +1,8 @@
-
-interface User {
-name: string;
-age:number;
-id: number;
-email:string;
+type User =  {
+   id: string;
+   username: string;
 }
 
-   type UserProfile = Pick<User, 'name'| 'email'>
+ type Users =  Record<string, User>
 
-   const displyUserPoroffi(user: UserProfile) => {
-    console.log(`Name: ${user.name}, Email ${user.email}`)
-   }
+ const users: Usrs 
