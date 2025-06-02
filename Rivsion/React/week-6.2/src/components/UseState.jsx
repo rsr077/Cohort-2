@@ -7,7 +7,12 @@ export const UseSate = () => {
       
       return <div>
          <button onClick={() => setCount(count => count + 1)} >{count}</button>
-         <input type=" text" placeholder="name" value={input} onChange={(e) => setInput(e.target.value) } ></input>
-         <p>your name : {input}</p>
+      {/*    <input type=" text" placeholder="name" value={input} onChange={(e) => setInput(e.target.value) } ></input>
+         <p>your name : {input}</p> */}
+
+         <input type="text" placeholder="name" value={input}  onChange={(e) => setInput(e.target.value)}/>
+
+          <p>{input}</p>
+        
       </div>
 }
