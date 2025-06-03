@@ -1,23 +1,20 @@
+import { SubHeading } from "../../../../Paytm/frontend/src/components/SubHeading"
 import { Button } from "../components/Button"
 import { ButtonWarning } from "../components/ButtonWarning"
 import { Heading } from "../components/Heading"
 import { InputBox } from "../components/InputBox"
-import { SubHeadig } from "../components/SubHeading"
 
-export const  Signin = () => {
-   return <div className="h-full flex justify-center bg-slate-300 ">
-    <div className="flex flex-col justify-center  ">
-      <div className="text-center bg-white w-80 p-2 ">  
-  <Heading label={"Signin"}/>
-  <SubHeadig label={"Enter your infromation to create an account"}/>
-   <InputBox placeholder={"jone"} label={"FirstName"}/>
-    <InputBox placeholder={"Doe"} label={"LastName"}/>
-     <InputBox placeholder={"rajeev35343@gmail.com"} label={"FirstName"}/>
-    <InputBox placeholder={"123456"} label={"Password"}/>
-   
-   <Button label={"Sign up"}/>
-   <ButtonWarning label={"Already have an account?"} buttonText={"Sign in"} to={"/signin"} />
-    </div>
-   </div>
+export const Signin= () => {
+   return <div className="flex justify-center bg-slate-300 h-screen   ">
+      <div className=" flex flex-col justify-center">
+         <div className="bg-white text-center p-2 rounded-lg h-max px-4 w-80">
+       <Heading label={"Sign in"}/>
+       <SubHeading label={"Enter the credentials to access your account"}/>
+       <InputBox placeholder={"rajeev234@gmail.com"} label={"Email"}/>
+       <InputBox placeholder={"1234567"} label={"Password"}/>
+       <Button label={"Sign in"}/>
+      <ButtonWarning  label={"Don't have an account?"} buttonText={"Sign up"} to={"/signup"}  />
+         </div>
+      </div>
    </div>
 }
