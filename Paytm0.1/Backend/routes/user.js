@@ -78,10 +78,14 @@ router.post("/signup",async(req,res)=> {
       username: req.body.username,
       password: req.body.password
      });
+       const userId = user._id;
+       const token = jwt.sign({
+      userId     
+     },JWT_SECRET);
 
      if(user) {
    res.json({
-    message: "login successfully"
+    message: "login successfully",token
       })
       return
      } else {
