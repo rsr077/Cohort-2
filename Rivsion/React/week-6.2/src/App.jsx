@@ -6,6 +6,8 @@ import  { ReactKey } from './components/key'
 import { Wrapper } from './components/Wrapper'
 import { Counter } from './components/UseEffect'
 import { ReactUseEffect } from './components/useEffec'
+import { CallBack } from './components/CallbackReact'
+import Timer from './components/UseRef'
 
 function App() {
 
@@ -13,7 +15,8 @@ function App() {
   return (
     <>
 
-  <greets/>
+ <Timer/>
+{/* <CallBack/> */}
 {/* 
  <ReactUseEffect/> */}
 

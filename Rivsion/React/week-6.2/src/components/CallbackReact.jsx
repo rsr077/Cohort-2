@@ -1,4 +1,5 @@
-export function greets(name, callback) {
+export function CallBack() {
+function greets(name, callback) {
   console.log("Hi " + name);
   callback(); // calling the passed function
 }
@@ -8,3 +9,6 @@ function sayBye() {
 }
 
 greets("Rajeev", sayBye);
+}
+
+
