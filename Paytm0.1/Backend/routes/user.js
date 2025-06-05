@@ -31,7 +31,7 @@ router.post("/signup",async(req,res)=> {
 
     if(existingUser) {
       return res.status(411).json({
-        message: "Email already taken/ Incorrect inputs"
+        message: "Email already taken"
       })
     }
 
@@ -68,33 +68,44 @@ router.post("/signup",async(req,res)=> {
     password: zod.string()
  })
 
- router.post("/sigin",async(req,res)=> {
-     const {success} = siginBody.safeParse(req.body);
-     if(!success) {
-       res.status(411).json({message:"you're give wrong input"});
-     }
 
-     const user = await User.findOne({
-      username: req.body.username,
-      password: req.body.password
-     });
-       const userId = user._id;
-       const token = jwt.sign({
-      userId     
-     },JWT_SECRET);
 
-     if(user) {
-   res.json({
-    message: "login successfully",token
-      })
-      return
-     } else {
-       res.json({
-    message: "Please Enter right input"
-      })
-     }
- })
 
+
+ router.post("/signin", async (req, res) => {
+  const { success } = siginBody.safeParse(req.body);
+
+  if (!success) {
+    return res.status(411).json({ message: "You're giving wrong input" });
+  }
+
+  const user = await User.findOne({
+    username: req.body.username,
+    password: req.body.password
+  });
+
+  if (user) {
+    const userId = user._id; // ✅ Only access _id if user exists
+    const token = jwt.sign({ userId }, JWT_SECRET);
+
+    return res.json({
+      message: "Login successful",
+      token
+    });
+  } else {
+    return res.status(401).json({
+      message: "Invalid username or password"
+    });
+  }
+});
+
+
+
+
+
+
+
+ 
   const updateBody = zod.object({
   password: zod.string().optional(),
   firstName:zod.string().optional(),

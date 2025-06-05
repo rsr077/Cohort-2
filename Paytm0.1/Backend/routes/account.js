@@ -12,9 +12,13 @@ router.get("/balance",authMiddleware,async (req,res)=> {
   const account = await Account.findOne({
     userId: req.userId
   });
+
+ 
+
   res.json({
     balance:account.balance 
   })
+  
 })
 
 router.post("/transfer",authMiddleware, async(req,res)=> {
@@ -28,6 +32,7 @@ router.post("/transfer",authMiddleware, async(req,res)=> {
        await session.abortTransaction();
        return res.status(400).json({
         message: "Insufficient balance"
+        
        })
     }
       
