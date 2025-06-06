@@ -15,7 +15,10 @@ function App() {
   return (
     <>
 
- <Timer/>
+
+
+
+{/*  <Timer/> */}
 {/* <CallBack/> */}
 {/* 
  <ReactUseEffect/> */}
