@@ -1,0 +1,16 @@
+name = "week-12"
+main = "src/index.ts"
+compatibility_date = "2025-06-07"
+
+compatibility_flags = ["nodejs_compat"]
+  
+
+
+[assets]
+directory = "./public"
+
+[observability]
+enabled = true
+
+[vars]
+DATABASE_URL = "prisma://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiMDFKWDlESzA2SEI2NFBBSkFIMUJUNzBCWEEiLCJ0ZW5hbnRfaWQiOiI4M2JiYmUzNmZiMTNmODhlOGM0N2JkMzJkMDIwYWIyN2Y4ZGVhYjdmMzk3NmQ5YWRkMzk2ZjQwYjVlZjUyODY2IiwiaW50ZXJuYWxfc2VjcmV0IjoiYmIwNTFiMDAtNGU5OS00Njk1LTkzMzQtNDQ4ZDY5MGUwZmZlIn0.BKDHBr0_ov7aQJa-IigkS8yXxld_stgWcHS8YtqO7KA"

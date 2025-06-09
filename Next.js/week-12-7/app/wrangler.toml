@@ -1,0 +1,12 @@
+name = "app"
+main = "src/index.ts"
+compatibility_date = "2025-06-09"
+
+
+
+DATABASE_URL="prisma://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiMDFKWDk3QjFCNkRUWDkyTkJSVjBBNEpDRkIiLCJ0ZW5hbnRfaWQiOiI4M2JiYmUzNmZiMTNmODhlOGM0N2JkMzJkMDIwYWIyN2Y4ZGVhYjdmMzk3NmQ5YWRkMzk2ZjQwYjVlZjUyODY2IiwiaW50ZXJuYWxfc2VjcmV0IjoiYmIwNTFiMDAtNGU5OS00Njk1LTkzMzQtNDQ4ZDY5MGUwZmZlIn0.KJ968aptWp0bTJYVCkDC-2JP_N84zSj2ksV0_78RtF4"
+
+
+[[kv_namespaces]]
+binding = "MY_KV"
+id = "abc123"
