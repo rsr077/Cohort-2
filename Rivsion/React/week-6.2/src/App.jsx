@@ -1,4 +1,4 @@
-
+import { Solutin } from './Reacp/useEffectsss'
 import './App.css'
 import { UseSate } from './components/UseState'
 import { ReactRetrns } from './components/React_Return'
@@ -16,7 +16,7 @@ function App() {
     <>
 
 
-
+<Solutin/>
 
 {/*  <Timer/> */}
 {/* <CallBack/> */}
@@ -34,6 +34,16 @@ function App() {
  {/* <ReactKey/> */}
    {/*  <UseSate/> */}
 {/*    <ReactRetrns/> */}
+
+
+
+
+
+
+
+
+
+
     </>
   )
 }
