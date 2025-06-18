@@ -3,6 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "exports": {
+    "./input-box2": "./src/input-box2.tsx",
+    "./input-box": "./src/input-box.tsx",
     "./*": "./src/*.tsx"
   },
   "scripts": {
