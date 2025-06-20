@@ -8,6 +8,7 @@ import { Counter } from './components/UseEffect'
 import { ReactUseEffect } from './components/useEffec'
 import { CallBack } from './components/CallbackReact'
 import Timer from './components/UseRef'
+import { UsEffe } from './Reacp/useEffec'
 
 function App() {
 
@@ -15,9 +16,8 @@ function App() {
   return (
     <>
 
-
-<Solutin/>
-
+<UsEffe/>
+{/* <Solutin/> */}
 {/*  <Timer/> */}
 {/* <CallBack/> */}
 {/* 
