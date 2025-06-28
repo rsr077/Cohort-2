@@ -24,7 +24,8 @@ function App() {
         <Route path="/signin" element={<Signin />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/send" element={<SendMoney />} />
-        <Route path="*" element={<h1>404 - Page Not Found</h1>} />
+      <Route path="*" element={<Signup />} />
+
       </Routes>
     </BrowserRouter>
        <ToastContainer />

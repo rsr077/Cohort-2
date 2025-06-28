@@ -35,7 +35,7 @@ const id = searchParams.get("id");
 
                                               
                                                 console.log("Sending to:", id, "amount:", amount);
-                                    axios.post("http://localhost:3000/api/v1/account/transfer", {
+                                    axios.post("https://paytm-backend-tawny.vercel.app/api/v1/account/transfer", {
                                         to: id,
                                         amount
                                        

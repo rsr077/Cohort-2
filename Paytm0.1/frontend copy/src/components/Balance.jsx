@@ -6,7 +6,7 @@ export const Balance= () => {
    const [balance, setBalance] = useState(0);
 
 useEffect(() => {
-    axios.get("http://localhost:3000/api/v1/account/balance", {
+    axios.get("https://paytm-backend-tawny.vercel.app/api/v1/account/balance", {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("token")
       }

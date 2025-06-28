@@ -41,7 +41,7 @@ export const Signup = () => {
       <div className="pt-4"> 
       <Button onClick={async () => {
         try { 
-            const response = await axios.post("http://localhost:3000/api/v1/user/signup", {
+            const response = await axios.post("https://paytm-backend-tawny.vercel.app/api/v1/user/signup", {
               username,
               firstName,
               lastName,
